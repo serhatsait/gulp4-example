@@ -47,7 +47,7 @@ function css() {
         cascade: true
     }))
     //.pipe(minifyCSS())
-    .pipe(concat('styles.min.css'))
+    .pipe(concat('bootstrap.min.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('build/assets/css'));
 }
