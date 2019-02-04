@@ -39,10 +39,11 @@
 
 **********************************************/
 
-@import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Roboto+Slab:100,300,400,700|Roboto+Condensed:300,400,700|Oswald:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Roboto+Slab:100,300,400,700,900|Roboto+Condensed:300,400,700,900|Oswald:300,400,700,900');
 
 
-@import url('font-awesome.css');
+/* @import url('font-awesome.css'); */
+@import url('fontawesome.min.css');
 @import url('flaticon.css');
 @import url('animate.css');
 @import url('owl.css');
@@ -73,8 +74,9 @@
  ***/
 
 body {
-	font-family: 'Roboto Slab', sans-serif;
-	font-size:15px;
+	/* font-family: 'Roboto Slab', sans-serif; */
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-size:14px;
 	color:#777777;
 	line-height:1.8em;
 	font-weight:400;
@@ -359,7 +361,8 @@ img{
 
 .main-header .header-top{
 	position:relative;
-	background:#222222;
+	/* background:#222222; */
+	background:#a70606;
 	color:#ffffff;
 }
 
@@ -381,17 +384,20 @@ img{
 	position: relative;
 	display:block;
 	float:left;
-    line-height: 24px;
+  line-height: 24px;
 	padding:13px 5px;
 	width:41px;
 	text-align:center;
-    font-size: 13px;
-    color: #aaaaaa;
-    transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
+  font-size: 12px;
+  /* color: #aaaaaa; */
+  color: #ffffff;
+  font-weight: 900;
+  /* font-family: 'Roboto', Arial, Helvetica, sans-serif; */
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
 }
 
 .header-top .social-icon a:first-child{
@@ -406,7 +412,8 @@ img{
 	display:inline-block;
 	line-height:24px;
 	padding:13px 30px;
-	background:#000000;
+	/* background:#000000; */
+	background:#6b0000;
 	font-size:13px;
 	color:#ffffff;
 	text-transform:uppercase;
@@ -426,18 +433,24 @@ img{
 	background:#bf1e2d;	
 }
 
-.main-header .main-box{
+.main-header .main-box {
 	position:relative;
 	padding:0px 0px;
 	left:0px;
 	top:0px;
 	width:100%;
-	background:#ffffff;
-	-webkit-transition:all 300ms ease;
-	-ms-transition:all 300ms ease;
-	-o-transition:all 300ms ease;
-	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;
+  background:#ffffff;
+
+  /* line-height: 2px !important; */
+	-webkit-transition:all 250ms ease-in-out;
+	-ms-transition:all 250ms ease-in-out;
+	-o-transition:all 250ms ease-in-out;
+	-moz-transition:all 250ms ease-in-out;
+  transition:all 250ms ease-in-out;
+
+
+  box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.095) !important;
+  -webkit-box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.095) !important;
 }
 
 .main-header.light-version .main-box{
@@ -446,31 +459,40 @@ img{
 
 .main-header.fixed-header .main-box{
 	position:fixed;
-	border-bottom:1px solid #e0e0e0;
+  /* border-bottom:1px solid #e0e0e0; */
+  
+	border-bottom:1px solid #ffffff;
 	padding:0px 0px;
 	z-index:999;
 	opacity:1;
-	visibility:visible;
+  visibility:visible;
+  
 	-ms-animation-name: fadeInDown;
 	-moz-animation-name: fadeInDown;
 	-op-animation-name: fadeInDown;
 	-webkit-animation-name: fadeInDown;
-	animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  
 	-ms-animation-duration: 500ms;
 	-moz-animation-duration: 500ms;
 	-op-animation-duration: 500ms;
 	-webkit-animation-duration: 500ms;
-	animation-duration: 500ms;
-	-ms-animation-timing-function: linear;
-	-moz-animation-timing-function: linear;
-	-op-animation-timing-function: linear;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
+  animation-duration: 500ms;
+  
+	-ms-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+	-op-animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  
 	-ms-animation-iteration-count: 1;
 	-moz-animation-iteration-count: 1;
 	-op-animation-iteration-count: 1;
 	-webkit-animation-iteration-count: 1;
-	animation-iteration-count: 1;	
+  animation-iteration-count: 1;	
+  
+  box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.1) !important;
+  -webkit-box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.1) !important;
 }
 
 .main-header.light-version.fixed-header .main-box{
@@ -490,7 +512,7 @@ img{
 	position:relative;
 	float:left;
 	left:0px;
-	padding:15px 0px;
+	/* padding:15px 0px; */
 	z-index:10;	
 }
 
@@ -655,10 +677,10 @@ img{
 .main-menu .navigation > li > a{
 	position:relative;
 	display:block;
-	padding:25px 0px;
+	/* padding:25px 0px; */
 	color:#000000;
 	text-align:center;
-	line-height:30px;
+	/* line-height:30px; */
 	text-transform:uppercase;
 	letter-spacing:0px;
 	font-weight:600;
@@ -703,8 +725,35 @@ img{
 .main-menu .navigation > li.current > a,
 .main-menu .navigation > li.current-menu-item > a{
 	color:#bf1e2d;
-	opacity:1;
+  opacity:1;
+  position: relative;
+  z-index: 1;
 }
+/* 
+.main-menu .navigation > li.current-menu-item > a::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  background: #bf1e2d;
+  z-index: 0;
+  margin: 0 auto;
+} 
+*/
+
+/* .main-menu .navigation > li.current-menu-item > a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 15px;
+  width: 40px;
+  height: 1px;
+  background: #bf1e2d;
+} */
 
 .main-menu .navigation > li > ul{
 	position:absolute;
@@ -1472,7 +1521,7 @@ img{
 .style-two .tabs-style-one .tabs-content h3{
 	font-size:34px;
 	font-weight:400;
-	font-family: 'Grand Hotel', cursive;
+	/*font-family: 'Grand Hotel', cursive;*/
 }
 
 .style-two .tabs-style-one .tabs-content .subtitle{
@@ -2281,7 +2330,7 @@ img{
 
 .testimonial-section-two .slide-item .info .title{
 	font-size:34px;
-	font-family: 'Grand Hotel', cursive;
+	/*font-family: 'Grand Hotel', cursive;*/
 	line-height:1.3em;
 	padding-right:20px;
 }
@@ -4297,7 +4346,7 @@ img{
 	position:relative;
 	padding:15px 20px;
 	border-left:5px solid #5ec79c;
-	font-family: 'Grand Hotel', cursive;
+	/*font-family: 'Grand Hotel', cursive;*/
 	background:none;
 	font-size:24px;
 	line-height:1.3em;
