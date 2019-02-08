@@ -135,7 +135,7 @@ function watchFiles() {
     watch(['client/templates/**/*.twig','client/data/*.twig.json'], parallel(twigTpl))
     .on('change', browsersync.reload);
     // Assets Watch and copy to build in some file changes
-    watch('client/assets/**/*', copyAssets).on('change', parallel(browsersync.reload));
+    watch('client/assets/**/*', series(copyAssets)).on('change', series(browsersync.reload));
 }
 
 const watching = parallel(watchFiles, browserSync);
