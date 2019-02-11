@@ -27,7 +27,8 @@
 	
 	.call-to-action-one .floated-image-left,
 	.sponsors-style-one .floated-image-left{
-		max-width:250px;	
+    bottom: -50px;
+    max-width: 400px;	
 	}
 	
 }
