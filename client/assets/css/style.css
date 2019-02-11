@@ -1223,7 +1223,7 @@ img{
 
 .sec-title-one{
 	position:relative;
-	padding-top:70px;
+	padding-top:40px;
 	padding-bottom:10px;
 	text-align:center;
 	margin-bottom:50px;
@@ -1313,9 +1313,9 @@ img{
 .intro-section .inner-part .content-box{
 	position:relative;
 	top:-200px;
-	padding:60px 110px 0px;
+	padding:50px 110px 50px 110px;
 	background:#ffffff;
-	margin-bottom:65px;
+	margin-bottom:25px;
 }
 
 .intro-section .inner-part .content-box .inner-box{
@@ -1329,7 +1329,7 @@ img{
 	right:100%;
 	margin-right:-110px;
 	width:570px;
-	height:510px;
+	height:210px;
 	z-index:1;
 }
 
@@ -1340,7 +1340,7 @@ img{
 	left:100%;
 	margin-left:-110px;
 	width:570px;
-	height:510px;
+	height:210px;
 	z-index:1;
 }
 
