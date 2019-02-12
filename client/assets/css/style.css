@@ -144,12 +144,23 @@ ul,li{
 }
 
 .theme-btn{
-	display:inline-block;
+  display:inline-block;
+  
 	transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
 	-ms-transition:all 0.3s ease;
-	-o-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  
+  
+  box-shadow: 0.115rem .55rem 1.0rem rgba(0, 0, 0, 0.095) !important;
+  -webkit-box-shadow: 0.115rem .55rem 1.0rem rgba(0, 0, 0, 0.095) !important;
+  
+}
+
+.theme-btn:hover {
+  box-shadow: 0.15rem .15rem .75rem rgba(0, 0, 0, 0.25) !important;
+  -webkit-box-shadow: 0.15rem .15rem .75rem rgba(0, 0, 0, 0.25) !important;
 }
 
 .centered{
@@ -3946,7 +3957,7 @@ img{
 	position:relative;
 	padding:100px 0px;
 	background-size:cover;
-	background-position:center center;
+	background-position:top center;
 	background-repeat:no-repeat;
 	text-align:center;
 }
