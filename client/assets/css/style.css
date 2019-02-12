@@ -1659,7 +1659,8 @@ img{
 .fluid-section-one h5{
 	font-size:25px;
 	line-height:1.2em;
-	margin-bottom:15px;	
+  margin-bottom:15px;
+  letter-spacing: -.5px;
 }
 
 /*** 
@@ -2381,7 +2382,7 @@ img{
 }
 
 .sponsors-style-one.alternate{
-	padding:80px 0px;
+	padding:90px 0px;
 	background:#f8f8f8;
 }
 
@@ -4719,7 +4720,7 @@ img{
 	-o-transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
   transition:all 500ms ease;	
-  
+
   box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.095) !important;
   -webkit-box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.095) !important;
 }

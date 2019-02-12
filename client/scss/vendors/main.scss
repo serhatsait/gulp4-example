@@ -1,8 +1,11 @@
-// Bootstrap default variables
+// Bootstrap 3 default variables
 @import "variables";
 
-// Bootstrap setups
+// Bootstrap 3 setups
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// Website custom css / scss to put in bottom of Bootstrap 4
+// Website custom css / scss to put after Bootstrap 4
+body {
+  
+}
