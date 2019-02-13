@@ -1,4 +1,8 @@
+
+'use strict';
+
 const { src, dest, parallel, series, watch } = require('gulp');
+
 // const pug = require('gulp-pug');
 const twig = require('gulp-twig');
 const sass = require('gulp-sass');
@@ -24,9 +28,36 @@ var paths = {
     js: './client/js/'
 };
 
-// SCSS bundled into CSS task
+// SCSS Main bundled into CSS task
 function css() {
-  return src('client/scss/vendors/*.scss')
+  return src('client/scss/vendors/main.scss')
+    .pipe(sourcemaps.init())
+    // Stay live and reload on error
+    .pipe(plumber({
+      handleError: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', function (err) {
+      console.log(err.message);
+      // sass.logError
+      this.emit('end');
+    }))
+    .pipe(prefix(['last 15 versions','> 1%','ie 8','ie 7','iOS >= 9','Safari >= 9','Android >= 4.4','Opera >= 30'], {
+      cascade: true
+    }))
+    //.pipe(minifyCSS())
+    .pipe(concat('style.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('build/assets/css'));
+}
+
+// SCSS Vendors bundled into CSS task
+function css_vendors() {
+  return src('client/scss/vendors/vendor.scss')
     .pipe(sourcemaps.init())
     // Stay live and reload on error
     .pipe(plumber({
@@ -37,7 +68,7 @@ function css() {
     }))
     .pipe(sass({
       includePaths: [paths.scss + 'vendors/'],
-      outputStyle: 'compressed'
+      outputStyle: 'expanded'
     }).on('error', function (err) {
       console.log(err.message);
       // sass.logError
@@ -126,7 +157,7 @@ function browserSync() {
 // Watch files
 function watchFiles() {
   // Watch SCSS changes    
-  watch(paths.scss + '**/*.scss', parallel(css))
+  watch(paths.scss + '**/*.scss', parallel(css,css_vendors))
   .on('change', browsersync.reload);
   // Watch javascripts changes    
   watch(paths.js + '*.js', parallel(js))
@@ -135,7 +166,7 @@ function watchFiles() {
   watch(['client/templates/**/*.twig','client/data/*.twig.json'], parallel(twigTpl))
   .on('change', browsersync.reload);
   // Assets Watch and copy to build in some file changes
-  watch('client/assets/**/*', series(copyAssets,css)).on('change', parallel(browsersync.reload));
+  watch('client/assets/**/*', series(copyAssets,css,css_vendors)).on('change', parallel(browsersync.reload));
 }
 
 const watching = parallel(watchFiles, browserSync);
