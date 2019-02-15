@@ -171,7 +171,7 @@ ul,li{
 	position:relative;
 	padding:8px 30px;
 	line-height:24px;
-	text-transform:capitalize;
+	// text-transform:capitalize;
 	background:#bf1e2d;
 	color:#ffffff;
 	border:2px solid #bf1e2d;
@@ -190,7 +190,7 @@ ul,li{
 	position:relative;
 	padding:8px 30px;
 	line-height:24px;
-	text-transform:capitalize;
+	// text-transform:capitalize;
 	background:#bf1e2d;
 	color:#ffffff;
 	border:2px solid #bf1e2d;
@@ -209,7 +209,7 @@ ul,li{
 	position:relative;
 	padding:8px 30px;
 	line-height:24px;
-	text-transform:capitalize;
+	// text-transform:capitalize;
 	background:none;
 	color:#ffffff;
 	border:2px solid #ffffff;
@@ -227,9 +227,9 @@ ul,li{
 	position:relative;
 	padding:8px 30px;
 	line-height:24px;
-	text-transform:capitalize;
+	// text-transform:capitalize;
 	background:none;
-	color:#000000;
+	color:#bf1e2d;
 	border:2px solid #bf1e2d;
 	font-size:14px;
 	font-weight:700;
@@ -245,7 +245,7 @@ ul,li{
 	position:relative;
 	padding:8px 30px;
 	line-height:24px;
-	text-transform:capitalize;
+	// text-transform:capitalize;
 	background:rgba(51,51,51,0.90);
 	color:#ffffff;
 	border:2px solid rgba(51,51,51,1);
@@ -2393,7 +2393,7 @@ img{
 }
 
 .sponsors-style-one.alternate{
-	padding:90px 0px;
+	padding:40px 0px 70px 0px;
 	background:#f8f8f8;
 }
 
@@ -3234,19 +3234,23 @@ img{
 	margin-bottom:30px;	
 }
 
-.product-style-two .inner-box{
+.product-style-two .inner-box {
 	position:relative;
   display:block;
-  /* -webkit-box-shadow: 0px 0px 18px -3px rgba(143, 143, 143, 0.5);
-  box-shadow: 0px 0px 18px -3px rgba(143, 143, 143, 0.5); */
+  /* -webkit-box-shadow: 0px 0px 18px -3px rgba(143, 143, 143, 0.5);*/
+  box-shadow: 0px 0px 18px -5px rgba(143, 143, 143, 0.5);
   padding:3rem;
   margin:0 auto;
-	border:1px solid #f0f0f0;	
+  border:1px solid #f0f0f0;
+  transition: box-shadow .5s ease; 
+  &:hover {
+    box-shadow: 0px 0px 18px -2px rgba(143, 143, 143, 0.5);
+  }
 }
 
 .product-style-two .inner-box .image-column,
 .product-style-two .inner-box .content-column{
-	padding:0px;	
+	padding:12px;	
 }
 
 .product-style-two .inner-box .image img{
@@ -3260,13 +3264,14 @@ img{
 	padding:30px 30px 25px;
 }
 
-.product-style-two .content-column h3{
+.product-style-two .content-column h3 {
 	font-size:20px;
-	font-weight:400;
-	color:#333333;
-	font-family:'Roboto Slab',serif;
+	font-weight:900;
+  color:#333333;
+  text-transform: uppercase;
+	// font-family:'Roboto Slab',serif;
 	line-height:1.4em;
-	margin-bottom:5px;	
+	margin-bottom:12px;	
 }
 
 .product-style-two .content-column .price{
@@ -4060,7 +4065,7 @@ img{
 
 .sidebar-page-container{
 	position:relative;
-	padding:120px 0px 90px;
+	padding:90px 0px 90px;
 }
 
 .sidebar-page-container .content-side{
@@ -4664,7 +4669,7 @@ img{
 
 .contact-section{
 	position:relative;
-	padding:120px 0px 100px;
+	padding:60px 0px 100px 0px;
 }
 
 .contact-section .contact-form{
