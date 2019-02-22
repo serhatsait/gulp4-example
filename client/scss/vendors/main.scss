@@ -1128,7 +1128,7 @@ img{
 	text-transform: capitalize;
 	border-top: 1px solid rgba(255,255,255,0.30);
 	border-bottom: 1px solid rgba(255,255,255,0.30);
-	padding: 10px 15px 10px 20px;
+	padding: 10px 15px 10px 40px;
 	position: relative;
 	transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -1224,6 +1224,10 @@ img{
 
 .secondary-slider.owl-carousel .owl-stage-outer {
   overflow: visible;
+}
+
+.secondary-slider.owl-theme .owl-controls {
+  margin-top:0;
 }
 
 /*** 
@@ -1330,7 +1334,7 @@ img{
 	top:-200px;
 	padding:40px 110px 50px 110px;
 	background:#ffffff;
-	margin-bottom:25px;
+	margin-bottom:15px;
 }
 
 .intro-section .inner-part .content-box .inner-box{
@@ -1344,7 +1348,7 @@ img{
 	right:100%;
 	margin-right:-110px;
 	width:570px;
-	height:210px;
+	height:100px;
 	z-index:1;
 }
 
@@ -1355,7 +1359,7 @@ img{
 	left:100%;
 	margin-left:-110px;
 	width:570px;
-	height:210px;
+	height:100px;
 	z-index:1;
 }
 
@@ -1398,11 +1402,9 @@ img{
 }
 
 /*** 
-
 ====================================================================
 	About Farm
 ====================================================================
-
 ***/
 
 .about-farm{
@@ -1460,11 +1462,9 @@ img{
 }
 
 /*** 
-
 ====================================================================
 	Tabs Style One
 ====================================================================
-
 ***/
 
 .tabs-style-one .tab-buttons{
@@ -1571,20 +1571,31 @@ img{
 }
 
 /*** 
-
 ====================================================================
 	Fluid Section One
 ====================================================================
-
 ***/
 
-.fluid-section-one{
+.fluid-section-one {
 	position:relative;
 	color:#ffffff;
-	background:url(../images/background/pattern-one.png) center center repeat;
+  background-image:url(../images/background/pattern-one.png);
+  background-position:center center;
+  background-repeat: repeat;
+  background-size:cover;  
 	background-attachment:fixed;
 }
-
+.secondary-slider.owl-carousel.owl-loaded {
+  .fluid-section-one {
+    position:relative;
+    color:#ffffff;
+    background-image:url(../images/background/pattern-one.png);
+    background-position:center center;
+    background-repeat: repeat;
+    background-size:cover;  
+    background-attachment:scroll;
+  }
+}
 .fluid-section-one .oval-cut{
 	position:absolute;
 	left:0;
@@ -2395,7 +2406,7 @@ img{
 }
 
 .sponsors-style-one.alternate{
-	padding:40px 0px 70px 0px;
+	padding:70px 0px 90px 0px;
 	background:#f8f8f8;
 }
 
@@ -3252,8 +3263,16 @@ img{
 
 .product-style-two .inner-box .image-column,
 .product-style-two .inner-box .content-column{
-	padding:1rem;	
+  padding:1rem 6.595rem .45rem 6.595rem;
+  @media only screen and (max-width: 1023.55px){
+    padding:1rem 3.595rem .45rem 3.595rem;    
+  }
+  @media only screen and (max-width: 768.55px){
+    padding:1rem 1.100rem .25rem 1.100rem;    
+  }
 }
+
+
 
 .product-style-two .inner-box .image img{
 	position:relative;

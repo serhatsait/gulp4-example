@@ -224,10 +224,11 @@
   if ($('.secondary-slider').length) {
     $('.secondary-slider').owlCarousel({
 			loop:true,
-			margin:30,
+			margin:0,
 			nav:false,
-			smartSpeed: 500,
-			autoplay: 5000,
+			smartSpeed: 700,
+      autoplay: 7000,
+      dots: false,
 			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
 			responsive:{
 				0:{
