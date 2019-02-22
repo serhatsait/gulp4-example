@@ -1222,20 +1222,22 @@ img{
 	display:none !important;	
 }
 
-/*** 
+.secondary-slider.owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
 
+/*** 
 ====================================================================
 	Titles / Headings Styles
 ====================================================================
-
 ***/
 
 .sec-title-one{
 	position:relative;
-	padding-top:40px;
+	padding-top:30px;
 	padding-bottom:10px;
 	text-align:center;
-	margin-bottom:50px;
+	margin-bottom:60px;
 }
 
 .sec-title-one:before{
@@ -1326,7 +1328,7 @@ img{
 .intro-section .inner-part .content-box{
 	position:relative;
 	top:-200px;
-	padding:50px 110px 50px 110px;
+	padding:40px 110px 50px 110px;
 	background:#ffffff;
 	margin-bottom:25px;
 }
@@ -3961,8 +3963,10 @@ img{
 .page-title{
 	position:relative;
 	padding:100px 0px;
-	background-size:cover;
-	background-position:top center;
+	// background-size:cover;
+	// background-position:top center;
+	background-size:100%;
+	background-position:center center;
 	background-repeat:no-repeat;
 	text-align:center;
 }
@@ -5280,13 +5284,10 @@ img{
 }
 
 /*** 
-
 ====================================================================
 	Product Tabs Style
 ====================================================================
-
 ***/
-
 
 .product-info-tabs{
 	position:relative;

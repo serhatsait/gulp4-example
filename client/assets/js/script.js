@@ -221,8 +221,33 @@
 		});
 	 });
 	}
-
-
+  if ($('.secondary-slider').length) {
+    $('.secondary-slider').owlCarousel({
+			loop:true,
+			margin:30,
+			nav:false,
+			smartSpeed: 500,
+			autoplay: 5000,
+			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:1
+				},
+				800:{
+					items:1
+				},
+				1024:{
+					items:1
+				},
+				1200:{
+					items:1
+				}
+			}
+    });
+  }  
 	//Sponsors Carousel
 	if ($('.sponsors-carousel').length) {
 		$('.sponsors-carousel').owlCarousel({

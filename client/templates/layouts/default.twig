@@ -2,42 +2,43 @@
 <html lang="zxx">
 <head>
 
-	{% include "../includes/head.twig" %}
+{% include "../includes/head.twig" %}
 
-    {% block styles %}{% endblock %}
-    
-	{% include "../includes/styles.twig" %}
+  {% block styles %}{% endblock %}
+  
+{% include "../includes/styles.twig" %}
 	
 </head>
 
 <body cz-shortcut-listen="true">
-    <div class="preloader"></div>
-    <div class="page-wrapper">
-        
-        <main>
+  <div class="preloader"></div>
+  
+  <div class="page-wrapper">
+      
+    <main>
 
-            {% include "../includes/header.twig" %}
+      {% include "../includes/header.twig" %}
 
-            {% include "../includes/navigation.twig" %}
+      {% include "../includes/navigation.twig" %}
 
-            {% block content %}
+      {% block content %}
 
-            {% endblock %}
+      {% endblock %}
 
-        </main>
-        <!--End MAIN -->
-        
-    </div>
-    <!--End pagewrapper-->
-    
-    <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target="html" style="display: none;">
-        <span class="fas fa-arrow-up"></span>
-    </div>
+    </main>
+    <!--End MAIN -->
+      
+  </div>
+  <!--End pagewrapper-->
+  
+  <!--Scroll to top-->
+  <div class="scroll-to-top scroll-to-target" data-target="html" style="display: none;">
+    <span class="fas fa-arrow-up"></span>
+  </div>
 
-	{% include "../includes/footer.twig" %}
+{% include "../includes/footer.twig" %}
 
-	{% include "../includes/scripts.twig" %}
+{% include "../includes/scripts.twig" %}
 	
 </body>
 </html>
