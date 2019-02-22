@@ -226,8 +226,8 @@
 			loop:true,
 			margin:0,
 			nav:false,
-			smartSpeed: 700,
-      autoplay: 7000,
+			smartSpeed: 900,
+      autoplay: 9000,
       dots: false,
 			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
 			responsive:{
