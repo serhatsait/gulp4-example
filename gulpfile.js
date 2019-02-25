@@ -136,7 +136,8 @@ function twigTpl () {
  */
 function copyAssets() {
   // Copy assets
-  return src('./client/assets/**/*.*',
+  // Exclude // .psd, // .map
+  return src(['./client/assets/**/*.*','!./client/assets/**/*.psd','!./client/assets/**/*.*.map'],
     del(paths.build + 'assets/**/*')
   )
   .pipe(gulpcopy(paths.build + 'assets', { prefix: 2 }));
@@ -154,24 +155,30 @@ function browserSync() {
   });
 }
 
+// BrowserSync reload 
+function browserReload () {
+  return browsersync.reload;
+}
+
 // Watch files
 function watchFiles() {
   // Watch SCSS changes    
   watch(paths.scss + '**/*.scss', parallel(css,css_vendors))
-  .on('change', browsersync.reload);
+  .on('change', browserReload());
   // Watch javascripts changes    
   watch(paths.js + '*.js', parallel(js))
-  .on('change', browsersync.reload);
+  .on('change', browserReload());
   // Watch template changes
   watch(['client/templates/**/*.twig','client/data/*.twig.json'], parallel(twigTpl))
-  .on('change', browsersync.reload);
-  // Assets Watch and copy to build in some file changes
-  watch('client/assets/**/*', series(copyAssets,css,css_vendors)).on('change', parallel(browsersync.reload));
+  .on('change', browserReload());
+  // Series on watch assets changes, copy and then reload browser 
+  watch('client/assets/**/*', series(copyAssets, css, css_vendors, js, browserReload()));
 }
 
+// Parallel for watching files and reload when changed
 const watching = parallel(watchFiles, browserSync);
 
 exports.js = js;
 exports.css = css;
-exports.default = parallel(css, js);
+exports.default = parallel(copyAssets, css, css_vendors, js, twigTpl);
 exports.watch = watching;

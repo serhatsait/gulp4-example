@@ -1324,9 +1324,9 @@ img{
 .intro-section .inner-part .content-box{
 	position:relative;
 	top:-200px;
-	padding:40px 110px 50px 110px;
+	padding:40px 45px 50px 45px;
 	background:#ffffff;
-	margin-bottom:15px;
+	margin-bottom:10px;
 }
 
 .intro-section .inner-part .content-box .inner-box{
@@ -1380,17 +1380,21 @@ img{
 }
 
 .intro-section .inner-part .content-column h3{
-	font-size:24px;
+	font-size:20px;
 	color:#bf1e2d;
 	line-height:1.4em;
-	margin-bottom:15px;
-	font-weight:700;
-	font-family:'Roboto Slab',serif;
+	margin-bottom:1.15rem;
+	// font-weight:300;
+  font-family:'Roboto Slab',serif;
+  margin: -3.5rem 1.75rem 1.25rem 1.75rem;
+  padding: .75rem 0rem .0;
+  background: white;
 }
 
 .intro-section .inner-part .content-column .text{
 	line-height:2em;
-	margin-bottom:20px;
+  // margin-bottom:20px;
+  margin: 0rem 2rem 20px 2rem;
 }
 
 /*** 
