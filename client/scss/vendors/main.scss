@@ -1,3 +1,157 @@
+// Utilities
+/*
+|--------------------------------------------------------------------------
+| Image Filter
+|--------------------------------------------------------------------------
+*/
+/* --- 1. Filter Grayscale --- */
+/* --- 1.1 Variables - grayscale image filter --- */
+/* --- 1.1.1 Variable Default --- */
+%ilist {
+  //   -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+  %ilist:hover {
+  //   -webkit-filter: none;
+    filter: none;
+  }
+  /* --- 1.1.2 Variable Invert --- */
+  %ilist-inv {
+    // -webkit-filter: none;
+    filter: none;
+  }
+  %ilist-inv:hover {
+    // -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: 0.40s both;
+  }
+  /* --- 1.2 Classes - grayscale image filter --- */
+  /* --- 1.2.1 Class Default --- */
+  .ilist {
+    @extend %ilist;
+    &:hover {
+      @extend %ilist:hover;
+    }
+  }
+  /* --- 1.2.2 Class Invert --- */
+  .ilist-inv {
+    @extend %ilist-inv;
+    &:hover {
+      @extend %ilist-inv:hover;
+    }
+  }
+  
+  /*! --- 2. Filter Invisible --- */
+  /*! --- 2.1 Variables - invisible image filter --- */
+  /*! --- 2.1.1 Variable Default --- */
+  %ilist-i {
+    -webkit-filter: none;
+    filter: none;
+  }
+  %ilist-i:hover {
+    -webkit-filter: opacity(.5);
+    filter: opacity(.5);
+  }
+  /*! --- 2.1.2 Variable Invert --- */
+  %ilist-i-inv {
+    -webkit-filter: opacity(.5);
+    filter: opacity(.5);
+  }
+  %ilist-i-inv:hover {
+    -webkit-filter: none;
+    filter: none;
+  }
+  /*! --- 2.2.1 Class Default --- */
+  .ilist-i {
+    @extend %ilist-i;
+    &:hover {
+      @extend %ilist-i:hover;
+    }
+  }
+  /*! --- 2.2.2 Class Invert --- */
+  .ilist-i-inv {
+    @extend %ilist-i-inv;
+    &:hover {
+      @extend %ilist-i-inv:hover;
+    }
+  }
+  
+  /*! --- 3. Filter Blur --- */
+  /*! --- 3.1 Variables - blur image filter --- */
+  /*! --- 3.1.1 Variable Default --- */
+  %ilist-b {
+  //   -webkit-filter: none;
+    filter: none;
+  }
+  %ilist-b:hover {
+  //   -webkit-filter: blur(1px);
+    filter: blur(2px);
+  }
+  /*! --- 3.1.2 Variable Invert --- */
+  %ilist-b-inv {
+    // -webkit-filter: blur(1px);
+    filter: blur(2px);
+  }
+  %ilist-b-inv:hover {
+    // -webkit-filter: none;
+    filter: none;
+  }
+  /*! --- 3.2.1 Class Default --- */
+  .ilist-b {
+    @extend %ilist-b;
+    &:hover {
+      @extend %ilist-b:hover;
+    }
+  }
+  /*! --- 3.2.2 Class Invert --- */
+  .ilist-b-inv {
+    @extend %ilist-b-inv;
+    &:hover {
+      @extend %ilist-b-inv:hover;
+    }
+  }
+  
+  /*! --- 4. Filter Contrast --- */
+  /*! --- 4.1 Variables - contrast image filter --- */
+  /*! --- 4.1.1 Variable Default --- */
+  %ilist-c {
+    // -webkit-filter: none;
+    filter: none;
+  }
+  %ilist-c:hover {
+    // -webkit-filter: contrast(1.3);
+    filter: contrast(1.3);
+  }
+  /*! --- 4.1.2 Variable Invert --- */
+  %ilist-c-inv {
+    // -webkit-filter: contrast(1.3);
+    filter: contrast(1.3);
+  }
+  %ilist-c-inv:hover {
+    // -webkit-filter: none;
+      filter: none;
+  }
+  /*! --- 4.2.1 Class Default - contrast image filter --- */
+  .ilist-c {
+    @extend %ilist-c;
+    &:hover {
+      @extend %ilist-c:hover;
+    }
+  }
+  /*! --- 4.2.2 Class Invert - contrast image filter --- */
+  .ilist-c-inv {
+    @extend %ilist-c-inv;
+    &:hover {
+      @extend %ilist-c-inv:hover;
+    }
+  }
+  
+  /*! ---- 5. Filter Classes Default initialization --- */
+  /*! transition you can change transition effects here */
+  [class~="ilist"], [class^="ilist-"], [class*=" ilist-"] {
+    transition: 0.35s ease-in;
+  }
+
 
 /************ TABLE OF CONTENTS ***************
 
@@ -1384,7 +1538,7 @@ img{
 	color:#bf1e2d;
 	line-height:1.4em;
 	margin-bottom:1.15rem;
-	// font-weight:300;
+	font-weight:700;
   font-family:'Roboto Slab',serif;
   margin: -3.5rem 1.75rem 1.25rem 1.75rem;
   padding: 1rem 0rem .0;
@@ -1400,6 +1554,17 @@ img{
 	line-height:2em;
   // margin-bottom:20px;
   margin: 0rem 2rem 20px 2rem;
+}
+.intro-section .inner-part .content-column .inner {
+  img {
+    transition: .5s ease-in-out;
+  }
+  &:hover {
+    img {
+    @extend %ilist-c:hover;  
+    // box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.1);
+    }
+  }  
 }
 
 /*** 
@@ -2663,6 +2828,7 @@ img{
 }
 
 .footer-style-one .footer-upper a{
+  font-weight: bold;
 	transition:all 0.5s ease;
 	-moz-transition:all 0.5s ease;
 	-webkit-transition:all 0.5s ease;
@@ -2765,7 +2931,7 @@ img{
 .footer-style-one .footer-bottom .copyright{
 	position:relative;
 	line-height:22px;
-	font-weight:400;
+	font-weight:bold;
 }
 
 .footer-style-two .footer-bottom{
@@ -4717,7 +4883,7 @@ img{
 
 .info-section .info-column .column-header h3{
 	line-height:40px;
-	font-size:30px;
+	// font-size:30px;
 }
 
 .info-section .info-column .info-box{
