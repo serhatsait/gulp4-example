@@ -1387,8 +1387,13 @@ img{
 	// font-weight:300;
   font-family:'Roboto Slab',serif;
   margin: -3.5rem 1.75rem 1.25rem 1.75rem;
-  padding: .75rem 0rem .0;
+  padding: 1rem 0rem .0;
   background: white;
+}
+
+.intro-section .inner-part .content-column .inner-image {
+  margin:0;
+  padding:0;
 }
 
 .intro-section .inner-part .content-column .text{
