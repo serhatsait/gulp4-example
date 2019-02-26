@@ -27,7 +27,6 @@
 
 	headerStyle();
 
-
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
 		$('.main-header li.dropdown').append('<div class="dropdown-btn"></div>');
@@ -42,7 +41,6 @@
 			e.preventDefault();
 		});
 	}
-
 
 	//Hidden Bar Menu Config
 	function hiddenBarMenuConfig() {
@@ -114,7 +112,7 @@
 		var slideOverlay =  "'"+ MainSlider.attr('data-slide-overlay') +"'";
 
 		$('.main-slider .tp-banner').show().revolution({
-		dottedOverlay: slideOverlay,
+		  dottedOverlay: slideOverlay,
 		  delay:10000,
 		  startwidth:1200,
 		  startheight:strtHeight,

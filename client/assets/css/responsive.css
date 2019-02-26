@@ -116,8 +116,7 @@
 }
 
 @media only screen and (max-width: 1023px){
-	
-	
+		
 	.main-header .main-box .logo-box {
 		position:relative;
 		left:0px;
@@ -149,8 +148,10 @@
 	.fluid-section-one .oval-cut,
 	.call-to-action-one .floated-image-right,
 	.call-to-action-one .floated-image-left,
-	.sponsors-style-one .floated-image-left{
-		display:none;	
+	.sponsors-style-one .floated-image-left {
+    display:none;
+    /* bottom:0px !important; */
+    /* max-width:150px; */
 	}
 	
 	.fluid-section-one .left-column,
@@ -264,11 +265,34 @@
 	}
 	
 	.main-slider .tp-caption{
-		display:none !important;
-	}
-	
+    /* display:none !important; */
+    padding-left:2rem !important;
+    padding-right:2rem !important;
+  }
+  .main-slider .theme-btn .fas,.main-slider .theme-btn .far, .main-slider .theme-btn .fab {
+    display: none;
+  }
+  .main-slider .theme-btn {
+    font-size: 1rem !important;
+    padding: .75rem 1rem !important;
+    margin-top: 2.7rem !important; 
+  }
+  .main-slider h3 {
+    font-size: 22px !important;
+  }
+  
+  .fluid-section-one .floated-image-left, 
+  .call-to-action-one .floated-image-left,
+	.sponsors-style-one .floated-image-left {
+    left:0px !important;
+  }
+  .fluid-section-one .floated-image-right,
+  .call-to-action-one .floated-image-right {
+    right:0px !important;
+  }
+
 	.sec-title h2{
-		font-size:24px;	
+		font-size:25px;	
 	}
 	
 	.products-section .shop-upper-box .items-label,

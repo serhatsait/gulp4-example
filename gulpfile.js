@@ -172,7 +172,8 @@ function watchFiles() {
   watch(['client/templates/**/*.twig','client/data/*.twig.json'], parallel(twigTpl))
   .on('change', browserReload());
   // Series on watch assets changes, copy and then reload browser 
-  watch('client/assets/**/*', series(copyAssets, css, css_vendors, js, browserReload()));
+  watch('client/assets/**/*')
+  .on('change', series(copyAssets, css, css_vendors, js, browserReload()));
 }
 
 // Parallel for watching files and reload when changed
