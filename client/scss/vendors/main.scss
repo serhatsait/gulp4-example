@@ -1540,8 +1540,8 @@ img{
 	margin-bottom:1.15rem;
 	font-weight:700;
   font-family:'Roboto Slab',serif;
-  margin: -3.5rem 1.75rem 1.25rem 1.75rem;
-  padding: 1rem 0rem .0;
+  margin: -3.5rem 1.75rem 0rem 1.75rem;
+  padding: 1rem 0rem 1.35rem;
   background: white;
 }
 
@@ -1559,10 +1559,16 @@ img{
   img {
     transition: .5s ease-in-out;
   }
+  .theme-btn.btn-style-two {
+    transition: .5s ease-in-out;
+  }
   &:hover {
     img {
-    @extend %ilist-c:hover;  
-    // box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.1);
+      @extend %ilist-c:hover;  
+      box-shadow: 0 0.175rem 0.92rem rgba(0, 0, 0, 0.1);
+    }
+    .theme-btn.btn-style-two {
+      transform: translateY(-2.5px);
     }
   }  
 }
@@ -2853,20 +2859,22 @@ img{
 }
 
 .footer-style-one .footer-upper .links-widget li{
+  margin-left:2rem;
 	position:relative;
-	margin-bottom:7px;
+  list-style: disc;
 }
 
 .footer-style-one .footer-upper .links-widget li a{
 	position:relative;
 	display:block;
 	font-size:13px;
-	color:#777777;
+  color:#bf1e2d;
+  margin-left: -.4rem;
 	line-height:24px;
 }
 
 .footer-style-one .footer-upper .links-widget li a:hover{
-	color:#bf1e2d;
+	color:#3f3f3f;
 }
 
 .footer-style-one .footer-upper .social-links h3{
