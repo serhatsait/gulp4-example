@@ -3402,13 +3402,36 @@ img{
   display:block;
   /* -webkit-box-shadow: 0px 0px 18px -3px rgba(143, 143, 143, 0.5);*/
   box-shadow: 0px 0px 18px -5px rgba(143, 143, 143, 0.5);
-  padding:3rem;
+  padding:3rem 3rem 3rem 3rem;
   margin:0 auto;
   border:1px solid #f0f0f0;
   transition: box-shadow .5s ease; 
   &:hover {
     box-shadow: 0px 0px 18px -2px rgba(143, 143, 143, 0.5);
   }
+  &:before {
+    content:" ";
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-image: url('../images/background/pattern-two.png');
+    background-position: top right;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    opacity: .075;
+    // transform: scale(1);
+  }
+  .theme-btn.btn-style-four {
+    background-color: white;
+    &:hover {
+      background-color:#bf1e2d;
+    }
+  }
+  .inner h3 { color:#bf1e2d; font-family: 'Roboto Slab',serif; }
 }
 
 .product-style-two .inner-box .image-column,
