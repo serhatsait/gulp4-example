@@ -112,7 +112,10 @@
 		display:block !important;
 		visibility:hidden;
 		opacity:0;
-	}
+  }
+  /* .main-slider h3 {
+    line-height:1.25rem;
+  } */
 }
 
 @media only screen and (max-width: 1023px){
@@ -279,6 +282,7 @@
   }
   .main-slider h3 {
     font-size: 22px !important;
+    /* line-height: 1.25rem !important; */
   }
   
   .fluid-section-one .floated-image-left, 

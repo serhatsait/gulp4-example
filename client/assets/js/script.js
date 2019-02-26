@@ -30,12 +30,10 @@
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
 		$('.main-header li.dropdown').append('<div class="dropdown-btn"></div>');
-
 		//Dropdown Button
 		$('.main-header li.dropdown .dropdown-btn').on('click', function() {
 			$(this).prev('ul').slideToggle(500);
 		});
-
 		//Disable dropdown parent link
 		$('.main-header .navigation li.dropdown > a,.hidden-bar .side-menu li.dropdown > a').on('click', function(e) {
 			e.preventDefault();
@@ -77,12 +75,10 @@
 		var hiddenBarOpener = $('.hidden-bar-opener');
 		var hiddenBarCloser = $('.hidden-bar-closer');
 		$('.hidden-bar-wrapper').mCustomScrollbar();
-
 		//Show Sidebar
 		hiddenBarOpener.on('click', function () {
 			hiddenBar.addClass('visible-sidebar');
 		});
-
 		//Hide Sidebar
 		hiddenBarCloser.on('click', function () {
 			hiddenBar.removeClass('visible-sidebar');
@@ -431,15 +427,13 @@
 
 	// Elements Animation
 	if($('.wow').length){
-		var wow = new WOW(
-		  {
+		var wow = new WOW({
 			boxClass:     'wow',      // animated element css class (default is wow)
 			animateClass: 'animated', // animation css class (default is animated)
 			offset:       0,          // distance to the element when triggering the animation (default is 0)
 			mobile:       true,       // trigger animations on mobile devices (default is true)
 			live:         true       // act on asynchronously loaded content (default is true)
-		  }
-		);
+		  });
 		wow.init();
 	}
 
