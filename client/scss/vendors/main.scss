@@ -1594,6 +1594,7 @@ img{
 }
 
 .about-farm .image-box{
+  margin-top:25px;
 	position:relative;
 	display:block;
 	text-align:center;	
@@ -1706,8 +1707,12 @@ img{
 }
 
 .tabs-style-one .tabs-content{
-	padding:50px 0px;
-	text-align:center;	
+	padding:0px;
+  text-align:center;
+  .content h4 {
+    font-weight: 600;
+    margin:.5rem;
+  }
 }
 
 .tabs-style-one .tabs-content h3{
@@ -3841,7 +3846,7 @@ img{
 
 .featured-block-one{
 	position:relative;
-	margin-bottom:40px;
+  margin:40px auto;
 	text-align:center;	
 }
 
