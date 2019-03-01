@@ -487,7 +487,12 @@
 		left:0px;
 		top:0px;
 		margin:0 auto 20px;	
-	}
+  }
+  
+  /** Hide when in mobile **/
+  .main-header .header-top {
+    display: none;
+  }
 	
 	.main-header .header-top .top-right,
 	.main-header .header-top .top-left{

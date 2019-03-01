@@ -467,11 +467,11 @@ ul,li{
   background-image:url(../images/preloader.gif);
 }
 
-img{
-	display:inline-block;
-	max-width:100%;
-	height:auto;	
-}
+// img{
+// 	display:inline-block;
+// 	max-width:100%;
+// 	height:auto;	
+// }
 
 /*** 
 
@@ -594,13 +594,13 @@ img{
 	color:#ffffff;
 	text-transform:uppercase;
 	/* letter-spacing:1px; */
-	font-weight:900;
+	font-weight:600;
 }
 
 .header-top .get-quote-btn .fa{
 	position:relative;
 	line-height:24px;
-	padding-right:5px;
+	padding-right:8px;
 	font-weight:400;
 	font-size:13px;	
 }
@@ -3441,12 +3441,12 @@ img{
 
 .product-style-two .inner-box .image-column,
 .product-style-two .inner-box .content-column{
-  padding:1rem 6.595rem .45rem 6.595rem;
-  @media only screen and (max-width: 1023.55px){
+  padding:1rem 6.89rem .45rem 6.89rem;
+  @media only screen and (max-width: 1024.55px){
     padding:1rem 3.595rem .45rem 3.595rem;    
   }
   @media only screen and (max-width: 768.55px){
-    padding:1rem 1.100rem .25rem 1.100rem;    
+    padding:1rem .75rem .25rem .75rem;    
   }
 }
 
