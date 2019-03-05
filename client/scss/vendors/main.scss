@@ -41,9 +41,9 @@
     }
   }
   
-  /*! --- 2. Filter Invisible --- */
-  /*! --- 2.1 Variables - invisible image filter --- */
-  /*! --- 2.1.1 Variable Default --- */
+  /* --- 2. Filter Invisible --- */
+  /* --- 2.1 Variables - invisible image filter --- */
+  /* --- 2.1.1 Variable Default --- */
   %ilist-i {
     -webkit-filter: none;
     filter: none;
@@ -52,7 +52,7 @@
     -webkit-filter: opacity(.5);
     filter: opacity(.5);
   }
-  /*! --- 2.1.2 Variable Invert --- */
+  /* --- 2.1.2 Variable Invert --- */
   %ilist-i-inv {
     -webkit-filter: opacity(.5);
     filter: opacity(.5);
@@ -61,14 +61,14 @@
     -webkit-filter: none;
     filter: none;
   }
-  /*! --- 2.2.1 Class Default --- */
+  /* --- 2.2.1 Class Default --- */
   .ilist-i {
     @extend %ilist-i;
     &:hover {
       @extend %ilist-i:hover;
     }
   }
-  /*! --- 2.2.2 Class Invert --- */
+  /* --- 2.2.2 Class Invert --- */
   .ilist-i-inv {
     @extend %ilist-i-inv;
     &:hover {
@@ -76,9 +76,9 @@
     }
   }
   
-  /*! --- 3. Filter Blur --- */
-  /*! --- 3.1 Variables - blur image filter --- */
-  /*! --- 3.1.1 Variable Default --- */
+  /* --- 3. Filter Blur --- */
+  /* --- 3.1 Variables - blur image filter --- */
+  /* --- 3.1.1 Variable Default --- */
   %ilist-b {
   //   -webkit-filter: none;
     filter: none;
@@ -87,7 +87,7 @@
   //   -webkit-filter: blur(1px);
     filter: blur(2px);
   }
-  /*! --- 3.1.2 Variable Invert --- */
+  /* --- 3.1.2 Variable Invert --- */
   %ilist-b-inv {
     // -webkit-filter: blur(1px);
     filter: blur(2px);
@@ -96,14 +96,14 @@
     // -webkit-filter: none;
     filter: none;
   }
-  /*! --- 3.2.1 Class Default --- */
+  /* --- 3.2.1 Class Default --- */
   .ilist-b {
     @extend %ilist-b;
     &:hover {
       @extend %ilist-b:hover;
     }
   }
-  /*! --- 3.2.2 Class Invert --- */
+  /* --- 3.2.2 Class Invert --- */
   .ilist-b-inv {
     @extend %ilist-b-inv;
     &:hover {
@@ -111,9 +111,9 @@
     }
   }
   
-  /*! --- 4. Filter Contrast --- */
-  /*! --- 4.1 Variables - contrast image filter --- */
-  /*! --- 4.1.1 Variable Default --- */
+  /* --- 4. Filter Contrast --- */
+  /* --- 4.1 Variables - contrast image filter --- */
+  /* --- 4.1.1 Variable Default --- */
   %ilist-c {
     // -webkit-filter: none;
     filter: none;
@@ -122,7 +122,7 @@
     // -webkit-filter: contrast(1.3);
     filter: contrast(1.3);
   }
-  /*! --- 4.1.2 Variable Invert --- */
+  /* --- 4.1.2 Variable Invert --- */
   %ilist-c-inv {
     // -webkit-filter: contrast(1.3);
     filter: contrast(1.3);
@@ -131,14 +131,14 @@
     // -webkit-filter: none;
       filter: none;
   }
-  /*! --- 4.2.1 Class Default - contrast image filter --- */
+  /* --- 4.2.1 Class Default - contrast image filter --- */
   .ilist-c {
     @extend %ilist-c;
     &:hover {
       @extend %ilist-c:hover;
     }
   }
-  /*! --- 4.2.2 Class Invert - contrast image filter --- */
+  /* --- 4.2.2 Class Invert - contrast image filter --- */
   .ilist-c-inv {
     @extend %ilist-c-inv;
     &:hover {
@@ -146,8 +146,8 @@
     }
   }
   
-  /*! ---- 5. Filter Classes Default initialization --- */
-  /*! transition you can change transition effects here */
+  /* ---- 5. Filter Classes Default initialization --- */
+  /* transition you can change transition effects here */
   [class~="ilist"], [class^="ilist-"], [class*=" ilist-"] {
     transition: 0.35s ease-in;
   }
