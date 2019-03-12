@@ -18,7 +18,13 @@
 		"image_width":"1200",
 		"image_height":"630"
 	},
-	"author" : "Dykraf",
+  "author" : "Dykraf",
+  "company": {
+	  "address" :"Menara Karya Building 28th Floor,<br> Jl. H. R. Rasuna Said Kav. 1-2<br>Blok X-5 Kuningan Timur, Jakarta 12950",
+	  "warehouse" :"Jl. H. Baping No. 45, RT 12 RW 04 <br>Kel. Susukan, Kec. Ciracas, Jakarta Timur, Indonesia",
+	  "phone" : "+62 21 8062 5857",
+	  "email" : "info[at]asiatrade[.]co[.]id"
+	},
 	"fontawesome":  {
 		"Accessibility": [
 			".fab .fa-accessible-icon",
